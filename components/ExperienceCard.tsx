@@ -30,11 +30,11 @@ function ExperienceCard({}: Props) {
         <p>Started work... - Ended...</p>
 
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>Summary point</li>
+          <li>Summary point</li>
+          <li>Summary point</li>
+          <li>Summary point</li>
+          <li>Summary point</li>
         </ul>
       </div>
     </article>

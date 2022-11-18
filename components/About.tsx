@@ -10,11 +10,11 @@ function About({}: Props) {
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1.9 }}
-    className="flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
+    className="h-screen flex-col relative text-center md:text-top md:flex max-w-7xl px-10 justify-evenly mx-auto items-center my-5 inline-flex">
       <h3 className="top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         About
       </h3>
-
+        <div className="items-center md:flex md:flex-row">
       <motion.img
         initial={{
           x: -200,
@@ -26,10 +26,10 @@ function About({}: Props) {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         src="../aboutimg.png"
-        className="object-top md:mb-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-95 md:h-95 xl:w-[500px] xl:h-[700px] my-10 flex-shrink-0"
+        className="inline-flex object-top md:mb-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-95 md:h-95 xl:w-[400px] xl:h-[600px] mt-14 flex-shrink-0"
       />
 
-      <div className="md:my-10 px-0 md:px-10">
+      <div className="md:my-10 px-0 md:px-10 max-w-xl">
         <h4 className="mb-5 mt-5 text-4xl font-semibold">
           Here is a{" "}
           <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
@@ -40,6 +40,8 @@ function About({}: Props) {
         </p>
         <p className="text-base text-justify">
         I have been working as an operations assistant in the IT infrastructure technical support area for two years, which covers physical and logical infrastructure of networks and servers, desktops, switches, installations and operating systems.
+        </p>
+        <p className="text-base text-justify">
         For at least one year I've been studying and building web development projects, which include React, JavaScript, HTML, CSS and several related libraries.
         </p>
         <p className="text-base text-justify">
@@ -48,6 +50,7 @@ function About({}: Props) {
         <p className="text-base text-justify">
         My work profile is centered around agile methods, teamwork, effective communication, initiative, attention to detail and a constant willingness to learn.
         </p>
+      </div>
       </div>
     </motion.div>
   );

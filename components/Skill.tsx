@@ -7,15 +7,17 @@ type Props = {
 
 function Skill({ directionLeft }: Props) {
   return (
-    <div className="group relative flex cursor-pointer max-w-[100px]">
+    <div className="group relative flex cursor-pointer">
       <motion.img
-        initial={{
-          x: directionLeft ? -200 : 200,
-          opacity: 0
+        initial={{ opacity: 0 }}
+        transition={{
+          delay: 0.5,
+          x: { duration: 1 },
+          default: { ease: "linear" }
         }}
-        transition={{ duration: 1 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        whileInView={{ opacity: 1 }}
         src="../logosSkill/react-2.svg"
+        className="rounded-full border border-gray-500 object-cover h-20 w-20"
       />
     </div>
   );

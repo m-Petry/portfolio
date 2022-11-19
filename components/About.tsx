@@ -11,7 +11,7 @@ function About({}: Props) {
       transition={{ duration: 1.9 }}
       className="h-screen flex-col relative text-center md:text-top md:flex max-w-7xl px-10 justify-evenly mx-auto items-center my-5 inline-flex"
     >
-      <h3 className="top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="top-24 uppercase tracking-[20px] indent-5 text-gray-500 text-2xl">
         About
       </h3>
       <div className="items-center md:flex md:flex-row">
@@ -26,7 +26,7 @@ function About({}: Props) {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           src="../aboutimg.png"
-          className="inline-flex object-top md:mb-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-[300px] md:h-[450px] xl:w-[400px] xl:h-[600px] mt-0 flex-shrink-0"
+          className="inline-flex object-top md:mb-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-[300px] md:h-[450px] xl:w-[400px] xl:h-[600px] mt-10 flex-shrink-0"
         />
 
         <div className="md:my-00 px-0 md:px-10 max-w-xl">

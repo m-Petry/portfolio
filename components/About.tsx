@@ -26,11 +26,11 @@ function About({}: Props) {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           src="../aboutimg.png"
-          className="inline-flex object-top md:mb-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-95 md:h-95 xl:w-[400px] xl:h-[600px] mt-14 flex-shrink-0"
+          className="inline-flex object-top md:mb-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-[300px] md:h-[450px] xl:w-[400px] xl:h-[600px] mt-0 flex-shrink-0"
         />
 
-        <div className="md:my-10 px-0 md:px-10 max-w-xl">
-          <h4 className="mb-5 mt-5 text-4xl font-semibold">
+        <div className="md:my-00 px-0 md:px-10 max-w-xl">
+          <h4 className="mb-5 mt-8 md:mt-0 text-4xl font-semibold">
             Here is a{" "}
             <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
             background

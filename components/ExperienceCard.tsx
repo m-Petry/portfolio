@@ -14,7 +14,7 @@ type Props = {};
 
 function ExperienceCard({}: Props) {
   return (
-    <article className="flex flex-col rounded-lg items-center space-between space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10">
+    <article className="flex flex-col rounded-lg items-center space-between space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-70 cursor-pointer transition-opacity duration-200 overflow-hidden">
       <motion.img
         initial={{
           y: -100,
@@ -22,15 +22,22 @@ function ExperienceCard({}: Props) {
         }}
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="bg-white w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
+        viewport={{ once: true }}
+        className="bg-white w-32 h-32 rounded-full object-cover object-center"
         src="../logosExperience/conab-logo-vert.jpg"
         alt="conab-logo"
       />
 
-      <div>
+      <div className="text-center">
         <h4 className="text-4xl font-light">IT Operations Assistant</h4>
-        <p className="font-bold text-2xl mt-1">Conab</p>
-        <div className="flex space-x-2 my-2">
+        <p className="font-bold text-1xl mt-1">
+          Conab - Companhia Nacional de Abastecimento
+        </p>
+        <p className="text-1xl mt-1">
+          Ministry of Agriculture, Livestock and Food Supply
+        </p>
+        <p className="text-1xl mt-1">Federal Government of Brazil</p>
+        <div className="flex space-x-2 my-2 justify-center">
           <FcCustomerSupport className="h-6 w-6" />
           <AiFillWindows className="h-6 w-6 text-blue-400" />
           <FcLinux className="h-6 w-6" />
@@ -38,14 +45,14 @@ function ExperienceCard({}: Props) {
           <FcDataConfiguration className="h-6 w-6" />
           <FcElectronics className="h-6 w-6" />
         </div>
-        <p className="text-base py-5 text-gray-300">Oct/2020 - Nov/2022</p>
+        <p className="text-base py-2 text-gray-300">Oct/2020 - Nov/2022</p>
 
-        <ul className="list-disc space-y-4 ml-5 text-lg">
-          <li>Summary point</li>
-          <li>Summary point</li>
-          <li>Summary point</li>
-          <li>Summary point</li>
-          <li>Summary point</li>
+        <ul className="text-left list-disc space-y-4 ml-5 text-lg">
+          <li>Summary point </li>
+          <li>Summary point </li>
+          <li>Summary point </li>
+          <li>Summary point </li>
+          <li>Summary point </li>
         </ul>
       </div>
     </article>

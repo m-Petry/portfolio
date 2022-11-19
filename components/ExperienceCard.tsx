@@ -9,13 +9,12 @@ import {
   FcElectronics
 } from "react-icons/fc";
 import { FaNetworkWired } from "react-icons/fa";
-// import { BsServer } from "react-icons/bs";
 
 type Props = {};
 
 function ExperienceCard({}: Props) {
   return (
-    <article className="flex flex-col rounded-lg items-center space-between space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px]">
+    <article className="flex flex-col rounded-lg items-center space-between space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10">
       <motion.img
         initial={{
           y: -100,

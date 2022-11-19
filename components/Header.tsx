@@ -24,29 +24,53 @@ export default function Header({}: Props) {
         className="flex flex-row items-center"
       >
         {/* Social Icons */}
-        <SocialIcon
-          url="https://www.slack.com/"
-          fgColor="gray"
-          bgColor="transparent"
-          className="w-10 h-10 mr-2"
-        />
-        <SocialIcon
-          url="https://web.whatsapp.com/"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://www.github.com/"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://www.linkedin.com/"
-          fgColor="gray"
-          bgColor="transparent"
-        />
+        <motion.div
+          whileHover={{ scale: 1.2 }}
+          onHoverStart={(e) => {}}
+          onHoverEnd={(e) => {}}
+        >
+          <SocialIcon
+            url="https://www.slack.com/"
+            fgColor="gray"
+            bgColor="transparent"
+            className="w-10 h-10 mr-2"
+          />
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.2 }}
+          onHoverStart={(e) => {}}
+          onHoverEnd={(e) => {}}
+        >
+          <SocialIcon
+            url="https://web.whatsapp.com/"
+            fgColor="gray"
+            bgColor="transparent"
+          />
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.2 }}
+          onHoverStart={(e) => {}}
+          onHoverEnd={(e) => {}}
+        >
+          <SocialIcon
+            url="https://www.github.com/"
+            fgColor="gray"
+            bgColor="transparent"
+          />
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.2 }}
+          onHoverStart={(e) => {}}
+          onHoverEnd={(e) => {}}
+        >
+          <SocialIcon
+            url="https://www.linkedin.com/"
+            fgColor="gray"
+            bgColor="transparent"
+          />
+        </motion.div>
       </motion.div>
-
+      {/* Mail */}
       <motion.div
         initial={{
           x: 500,
@@ -59,18 +83,25 @@ export default function Header({}: Props) {
           scale: 1
         }}
         transition={{
-          duration: 1.5
+          duration: 1.2
         }}
       >
-        <SocialIcon
-          className="cursor-pointer"
-          network="email"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-          Get in Touch
-        </p>
+        <motion.div
+          whileHover={{ scale: 1.2 }}
+          onHoverStart={(e) => {}}
+          onHoverEnd={(e) => {}}
+        >
+          <SocialIcon
+            className="cursor-pointer"
+            network="email"
+            fgColor="gray"
+            bgColor="transparent"
+            url="gmail.com"
+          />
+          <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+            Get in Touch
+          </p>
+        </motion.div>
       </motion.div>
     </header>
   );

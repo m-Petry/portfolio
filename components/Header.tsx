@@ -6,7 +6,7 @@ type Props = {};
 
 export default function Header({}: Props) {
   return (
-    <header className="relative flex items-start justify-between mx-3 xl:mx-10 xl:mt-3 z-20 xl:items-center">
+    <header className="relative flex items-start justify-between mx-3 xl:mx-6 xl:mt-3 z-20 xl:items-center">
       <motion.div
         initial={{
           x: -500,

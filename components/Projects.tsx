@@ -12,13 +12,19 @@ function Projects({}: Props) {
       </h3>
 
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
-        {projects.map((project) => (
+        {projects.map((project, i) => (
           <>
-            <div>
-              <img src="" alt="" />
-            </div>
-            <div>
-              <h4>Case Study 01: fullstack eCommerce</h4>
+            <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44">
+              <img
+                src="../imgsProject/89367.jpg"
+                alt=""
+                className="rounded-lg"
+              />
+              <div>
+                <h4>
+                  Case Study {i + 1} of {projects.length} fullstack eCommerce
+                </h4>
+              </div>
             </div>
           </>
         ))}

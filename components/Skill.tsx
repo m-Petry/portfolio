@@ -11,8 +11,8 @@ function Skill({ directionLeft }: Props) {
       <motion.img
         initial={{ opacity: 0 }}
         transition={{
-          delay: 0.5,
-          x: { duration: 1 },
+          delay: 0.1,
+          x: { duration: 0.6 },
           default: { ease: "linear" }
         }}
         whileInView={{ opacity: 1 }}

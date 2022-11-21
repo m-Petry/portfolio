@@ -42,7 +42,7 @@ export default function Header({ socials }: Props) {
             />
           ))}
         </motion.div>
-        <motion.div
+        {/* <motion.div
           whileHover={{ scale: 1.2 }}
           onHoverStart={(e) => {}}
           onHoverEnd={(e) => {}}
@@ -74,7 +74,7 @@ export default function Header({ socials }: Props) {
             fgColor="gray"
             bgColor="transparent"
           />
-        </motion.div>
+        </motion.div> */}
       </motion.div>
       {/* Mail */}
       <motion.div

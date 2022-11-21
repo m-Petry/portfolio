@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import emailjs, { init, sendForm } from "emailjs-com";
-import { useForm, SubmitHandler } from "react-hook-form";
 
 init("contact_form");
 

@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
+import emailjs, { init, sendForm } from "emailjs-com";
 import { useForm, SubmitHandler } from "react-hook-form";
+
+init("contact_form");
 
 type Inputs = {
   name: string;
@@ -9,16 +12,34 @@ type Inputs = {
   message: string;
 };
 
-type Props = {};
-
-function ContactMe({}: Props) {
+function ContactMe() {
   // initialization of the connecting of state from react hook form
-  const { register, handleSubmit } = useForm<Inputs>();
 
-  //   what to do with the data when subbmit:
-  const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:marcelospetry@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}, ${formData.message} (${formData.email})`;
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "contact_form",
+        "template_r0y8wj9",
+        form.current,
+        "Ca3T0QiC-gtW4LS7m"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert(
+            "Message sent successfully! I will answer you as soon as possible."
+          );
+        },
+        (error) => {
+          console.log(error.text);
+          alert("There was an error. Can you try again?");
+        }
+      );
   };
+
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
       <h3 className="absolute top-20 md:top-24 uppercase tracking-[20px] indent-5 text-gray-500 text-2xl">
@@ -47,40 +68,40 @@ function ContactMe({}: Props) {
         </div>
         {/* connect form with react hook form (onSubmit) */}
         <form
-          onSubmit={handleSubmit(onSubmit)}
+          ref={form}
+          onSubmit={sendEmail}
           className="flex flex-col space-y-2 w-full md:w-screen md:max-w-4xl md:px-20 mx-auto"
         >
           <div className="flex space-x-2">
             <input
-              {...register("name")}
               placeholder="Name"
               className="contactInput"
+              name="user_name"
               type="text"
             />
             <input
-              {...register("email")}
               placeholder="E-mail"
               className="contactInput"
               type="email"
+              name="user_email"
             />
           </div>
           <input
-            {...register("subject")}
             placeholder="Subject"
             className="contactInput"
+            name="subject"
             type="text"
           />
           <textarea
-            {...register("message")}
+            name="message"
             placeholder="Message"
             className="contactInput"
           />
-          <button
+          <input
             type="submit"
+            value="Send"
             className="bg-[#F7AB0A] hover:bg-yellow-600 py-5 px-10 rounded-md text-black font-bold text-lg"
-          >
-            Submit
-          </button>
+          ></input>
         </form>
       </div>
     </div>

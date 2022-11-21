@@ -32,23 +32,23 @@ export default function Header({ socials }: Props) {
           onHoverStart={(e) => {}}
           onHoverEnd={(e) => {}}
         >
-          {socials?.map((social) => (
-            <SocialIcon
-              key={social._id}
-              url={social.url}
-              fgColor="gray"
-              bgColor="transparent"
-              className="w-10 h-10 mr-2"
-            />
-          ))}
+          {/* {socials.map((social) => ( */}
+          <SocialIcon
+            // key={social._id}
+            url="https://slack.com/app_redirect?channel=U048FPK0LUF"
+            fgColor="gray"
+            bgColor="transparent"
+            className="w-10 h-10 mr-2"
+          />
+          {/* ))} */}
         </motion.div>
-        {/* <motion.div
+        <motion.div
           whileHover={{ scale: 1.2 }}
           onHoverStart={(e) => {}}
           onHoverEnd={(e) => {}}
         >
           <SocialIcon
-            url="https://web.whatsapp.com/"
+            url="https://api.whatsapp.com/send/?phone=5551994085461&text=Msg+from+the+portfolio+website&type=phone_number&app_absent=0"
             fgColor="gray"
             bgColor="transparent"
           />
@@ -59,7 +59,7 @@ export default function Header({ socials }: Props) {
           onHoverEnd={(e) => {}}
         >
           <SocialIcon
-            url="https://www.github.com/"
+            url="https://www.github.com/m-Petry"
             fgColor="gray"
             bgColor="transparent"
           />
@@ -70,11 +70,11 @@ export default function Header({ socials }: Props) {
           onHoverEnd={(e) => {}}
         >
           <SocialIcon
-            url="https://www.linkedin.com/"
+            url="https://www.linkedin.com/in/m-petry/"
             fgColor="gray"
             bgColor="transparent"
           />
-        </motion.div> */}
+        </motion.div>
       </motion.div>
       {/* Mail */}
       <motion.div
@@ -102,7 +102,7 @@ export default function Header({ socials }: Props) {
             network="email"
             fgColor="gray"
             bgColor="transparent"
-            url="gmail.com"
+            url="mailto:marcelospetry@gmail.com?subject=Message%20from%20the%20Portfolio's%20Website&body=Hey!"
           />
           <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
             Get in Touch

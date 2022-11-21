@@ -12,8 +12,7 @@ type Inputs = {
 };
 
 function ContactMe() {
-  // initialization of the connecting of state from react hook form
-
+  // message sent function with emailJS
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();

@@ -17,23 +17,12 @@ module.exports = {
             },
             '100%': {
                 opacity: '1',
-                transform: 'translateY(-1rem)'
+                transform: 'translateY(-0.5rem)'
             },
         },
-        'fade-out-up': {
-            'from': {
-                opacity: '1',
-                transform: 'translateY(0px)'
-            },
-            'to': {
-                opacity: '0',
-                transform: 'translateY(10px)'
-            },
-        }
     },
     animation: {
         'fade-in-up': 'fade-in-up 1.7s ease-out infinite',
-        'fade-out-up': 'fade-out-up 0.5s ease-out'
     }
     },
   },

@@ -45,7 +45,9 @@ function ContactMe() {
       </h3>
       <div className="flex flex-col space-y-10 mt-20 scale-90 md:scale-100">
         <h4 className="text-4xl font-semibold text-center">
-          I{"'"}m <span className="text-lime-600">open to work</span>. <br />
+          I{"'"}m <span className="text-lime-600">open to work</span>.
+          <br />
+          <br />
           <span className="decoration-[#F7AB0A]/50 underline">
             Get in touch:
           </span>

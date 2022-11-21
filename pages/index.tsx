@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../components/Header";
@@ -7,6 +8,7 @@ import WorkExperience from "../components/WorkExperience";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
+import { FaChevronUp } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -41,6 +43,16 @@ export default function Home() {
       <section id="contact" className="snap-start">
         <ContactMe />
       </section>
+
+      <Link href="#hero">
+        <footer className="sticky bottom-5 w-full cursor-pointer animate-fade-in-up">
+          <div className="flex items-center justify-center">
+            <button>
+              <FaChevronUp />
+            </button>
+          </div>
+        </footer>
+      </Link>
     </div>
   );
 }

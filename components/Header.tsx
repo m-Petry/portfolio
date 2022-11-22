@@ -36,6 +36,7 @@ export default function Header({ socials }: Props) {
           <SocialIcon
             // key={social._id}
             url="https://slack.com/app_redirect?channel=U048FPK0LUF"
+            target="_blank"
             fgColor="gray"
             bgColor="transparent"
             className="w-10 h-10 mr-2"
@@ -49,6 +50,7 @@ export default function Header({ socials }: Props) {
         >
           <SocialIcon
             url="https://api.whatsapp.com/send/?phone=5551994085461&text=Msg+from+the+portfolio+website&type=phone_number&app_absent=0"
+            target="_blank"
             fgColor="gray"
             bgColor="transparent"
           />
@@ -60,6 +62,7 @@ export default function Header({ socials }: Props) {
         >
           <SocialIcon
             url="https://www.github.com/m-Petry"
+            target="_blank"
             fgColor="gray"
             bgColor="transparent"
           />
@@ -71,6 +74,7 @@ export default function Header({ socials }: Props) {
         >
           <SocialIcon
             url="https://www.linkedin.com/in/m-petry/"
+            target="_blank"
             fgColor="gray"
             bgColor="transparent"
           />
@@ -103,10 +107,8 @@ export default function Header({ socials }: Props) {
             fgColor="gray"
             bgColor="transparent"
             url="mailto:marcelospetry@gmail.com?subject=Message%20from%20the%20Portfolio's%20Website&body=Hey!"
+            target="_blank"
           />
-          <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-            Get in Touch
-          </p>
         </motion.div>
       </motion.div>
     </header>

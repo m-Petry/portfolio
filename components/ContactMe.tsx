@@ -100,7 +100,7 @@ function ContactMe() {
           <input
             type="submit"
             value="Send"
-            className="bg-[#F7AB0A] hover:bg-yellow-600 py-5 px-10 rounded-md text-black font-bold text-lg"
+            className="bg-[#F7AB0A] hover:bg-yellow-600 py-5 px-10 rounded-md text-black font-bold text-lg cursor-pointer"
           ></input>
         </form>
       </div>

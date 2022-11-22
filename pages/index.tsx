@@ -33,7 +33,9 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
         <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
-      <Header socials={socials} />
+      <section id="header">
+        <Header socials={socials} />
+      </section>
       {/* Hero */}
       <section id="hero" className="snap-start">
         <Hero />
@@ -44,11 +46,11 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
       </section>
       {/* Experience */}
       <section id="experience" className="snap-center">
-        <WorkExperience />
+        <WorkExperience experiences={experiences} />
       </section>
       {/* Skills */}
       <section id="skills" className="snap-start">
-        <Skills />
+        <Skills skills={skills} />
       </section>
       <section id="projects" className="snap-start">
         <Projects />
@@ -58,7 +60,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
         <ContactMe />
       </section>
 
-      <Link href="#hero">
+      <Link href="#header">
         <footer className="sticky bottom-5 w-full cursor-pointer animate-fade-in-up">
           <div className="flex items-center justify-center">
             <button>

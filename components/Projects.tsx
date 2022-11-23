@@ -10,20 +10,20 @@ type Props = {
 
 function Projects({ projects }: Props) {
   return (
-    <div className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly px-10 items-center z-0">
+    <div className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly items-center px-10 z-0">
       <h3 className="absolute top-24 uppercase tracking-[20px] indent-5 text-gray-500 text-2xl">
         Projects
       </h3>
 
-      <div className="relative w-full max-w-5xl flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div className="relative w-full p-10 max-w-5xl flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {projects?.map((project, i) => (
           <div
             key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen max-w-5xl"
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10 md:p-44 h-screen max-w-5xl"
           >
             <motion.img
               initial={{
-                y: -300,
+                y: -200,
                 opacity: 0
               }}
               transition={{ duration: 1.2 }}
@@ -58,7 +58,7 @@ function Projects({ projects }: Props) {
         ))}
       </div>
 
-      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12"></div>
+      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 h-[500px] -skew-y-12"></div>
     </div>
   );
 }

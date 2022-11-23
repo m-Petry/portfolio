@@ -11,17 +11,17 @@ type Inputs = {
   message: string;
 };
 
-function ContactMe() {
+export const ContactMe = () => {
   // message sent function with emailJS
   const form = useRef();
-  const sendEmail = (e) => {
+  const sendEmail = (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
         "contact_form",
         "template_r0y8wj9",
-        form.current,
+        form.current!,
         "Ca3T0QiC-gtW4LS7m"
       )
       .then(
@@ -106,6 +106,4 @@ function ContactMe() {
       </div>
     </div>
   );
-}
-
-export default ContactMe;
+};

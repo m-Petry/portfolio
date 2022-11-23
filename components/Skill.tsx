@@ -19,7 +19,7 @@ function Skill({ skill, directionLeft }: Props) {
           default: { ease: "linear" }
         }}
         whileInView={{ opacity: 1 }}
-        src={urlFor(skill?.image)}
+        src={urlFor(skill?.image).url()}
         className="rounded-full object-cover h-20 w-20 md:h-28 md:w-28 filter group-hover:grayscale transition duration-300 ease-in-out"
       />
       <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-20 w-20 md:h-28 md:w-28 rounded-full z-0">

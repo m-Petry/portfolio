@@ -10,7 +10,7 @@ type Props = {
 
 function Projects({ projects }: Props) {
   return (
-    <div className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-10 items-center z-0">
+    <div className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly px-10 items-center z-0">
       <h3 className="absolute top-24 uppercase tracking-[20px] indent-5 text-gray-500 text-2xl">
         Projects
       </h3>
@@ -32,7 +32,7 @@ function Projects({ projects }: Props) {
                 className="rounded-lg"
               />
               <div className="space-y-10 px-0 md:px-10 max-w-6xl ">
-                <h4 className="text-4xl font-semibold text-center">
+                <h4 className="text-2xl md:text-4xl font-semibold text-center">
                   <span className="underline decoration-[#F7AB0A]/50">
                     Case Study {i + 1} of {projects.length}:
                   </span>{" "}

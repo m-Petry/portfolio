@@ -2,7 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import ExperienceCard from "./ExperienceCard";
 import { Experience } from "../typings";
-
+import ExperienceCard2 from "./ExperienceCard2";
+import ExperienceCard3 from "./ExperienceCard3";
+import ExperienceCard4 from "./ExperienceCard4";
 type Props = {
   experiences: Experience[];
 };
@@ -17,6 +19,9 @@ function WorkExperience({ experiences }: Props) {
         {experiences.map((experience) => (
           <ExperienceCard key={experience._id} experience={experience} />
         ))}
+        <ExperienceCard2 />
+        <ExperienceCard3 />
+        <ExperienceCard4 />
       </div>
     </motion.div>
   );

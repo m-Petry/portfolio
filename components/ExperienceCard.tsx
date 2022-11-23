@@ -19,7 +19,7 @@ type Props = {
 
 function ExperienceCard({ experience }: Props) {
   return (
-    <article className="flex flex-col rounded-lg items-center space-between space-y-7 flex-shrink-0 w-[380px] md:w-[600px] lg:w-[900] xl:w-[1000px] snap-center bg-[#292929] py-6 hover:opacity-100 opacity-70 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article className="flex flex-col rounded-lg items-center space-between space-y-7 flex-shrink-0 w-[380px] md:w-[600px] lg:w-[900] xl:w-[1000px] snap-center bg-[#292929] py-5 hover:opacity-100 opacity-70 cursor-pointer transition-opacity duration-200 overflow-hidden">
       <motion.img
         initial={{
           y: -100,
@@ -32,8 +32,8 @@ function ExperienceCard({ experience }: Props) {
         src={urlFor(experience?.companyImage).url()}
         alt="enterprise-logo"
       />
-      <div className="px-8">
-        <div className="text-center">
+      <div className="px-10">
+        <div className="text-center scale-90 md:scale-100">
           <h4 className="text-4xl font-light">IT Operations Assistant</h4>
           <p className="font-bold text-1xl mt-1">
             Conab - Companhia Nacional de Abastecimento
@@ -58,16 +58,16 @@ function ExperienceCard({ experience }: Props) {
             ? "Present"
             : new Date(experience.dateEnded).toDateString()}
         </p>
-        <div className="flex flex-row justify-center space-x-4 text-blue-500">
-          <FaNetworkWired />
-          <FcLinux />
-          <FcDataConfiguration />
-          <FcCustomerSupport />
-          <FcElectronics />
-          <AiFillWindows />
+        <div className="flex space-x-2 my-2 justify-center">
+          <FcCustomerSupport className="h-6 w-6" />
+          <AiFillWindows className="h-6 w-6 text-blue-400" />
+          <FcLinux className="h-6 w-6" />
+          <FaNetworkWired className="h-6 w-6 text-slate-400" />
+          <FcDataConfiguration className="h-6 w-6" />
+          <FcElectronics className="h-6 w-6" />
         </div>
 
-        <ul className="text-left list-disc space-y-4 pr-5 ml-5 mt-5 text-lg max-h-96 overflow-y-scroll scrollbar-thin scrollbar-track-black/70 scrollbar-thumb-[#F7AB0A]/80 w-full">
+        <ul className="text-left list-disc space-y-4 pr-5 ml-5 mt-5 text-lg max-h-96 overflow-y-scroll scrollbar-thin scrollbar-track-black/70 scrollbar-thumb-[#F7AB0A]/80">
           {experience.points?.map((point, i) => (
             <li key={i}>{point}</li>
           ))}

@@ -68,7 +68,7 @@ export const ContactMe = () => {
         </div>
         {/* connect form with react hook form (onSubmit) */}
         <form
-          ref={form}
+          ref={form.current}
           onSubmit={sendEmail}
           className="flex flex-col space-y-2 w-full md:w-screen md:max-w-4xl md:px-20 mx-auto"
         >

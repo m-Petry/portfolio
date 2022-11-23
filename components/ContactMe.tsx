@@ -13,7 +13,7 @@ type Inputs = {
 
 export const ContactMe = () => {
   // message sent function with emailJS
-  const form = useRef();
+  const form = useRef(null);
   const sendEmail = (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
@@ -68,7 +68,7 @@ export const ContactMe = () => {
         </div>
         {/* connect form with react hook form (onSubmit) */}
         <form
-          ref={form.current}
+          ref={form}
           onSubmit={sendEmail}
           className="flex flex-col space-y-2 w-full md:w-screen md:max-w-4xl md:px-20 mx-auto"
         >

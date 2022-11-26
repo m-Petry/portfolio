@@ -52,10 +52,6 @@ function ExperienceCard2({}: Props) {
             growth, equality, and freedom of speech;
           </li>
           <li>
-            • Contributing to the creation of an environment that promotes
-            growth, equality, and freedom of speech;
-          </li>
-          <li>
             • Reviewing methods and teaching materials and making
             recommendations for improvement.
           </li>

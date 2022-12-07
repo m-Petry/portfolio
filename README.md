@@ -4,4 +4,4 @@ My personal portfolio website built with React, Next.js, JavaScript, TypeScript,
 
 Visit: https://marcelopetry.com
 <br>
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6999455856077475840" height="798" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+https://www.linkedin.com/posts/m-petry_portfoliowebsite-portfolio-typescript-activity-7001225501386158080-ZVuP?utm_source=share&utm_medium=member_desktop

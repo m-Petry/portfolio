@@ -33,7 +33,7 @@ const Home = ({ experiences, projects, skills, socials }: Props) => {
           name="description"
           content="Web Developer Marcelo Petry Portfolio Website"
         />
-        <link rel="icon" href="/favicon.jpg" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <section id="header">
@@ -64,7 +64,7 @@ const Home = ({ experiences, projects, skills, socials }: Props) => {
       </section>
 
       <Link href="#header">
-        <footer className="sticky bottom-5 w-full cursor-pointer animate-fade-in-up">
+        <footer className="sticky w-full cursor-pointer bottom-5 animate-fade-in-up">
           <div className="flex items-center justify-center">
             <button>
               <FaChevronUp />

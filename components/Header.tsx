@@ -75,7 +75,7 @@ export default function Header({ socials }: Props) {
             target="_blank"
             rel="noreferrer"
           >
-            <SiReplit className="w-[25px] h-[25px] mx-3 text-[#808080]" />
+            <SiReplit className="w-[24px] h-[24px] mx-3 text-[#808080]" />
           </a>
         </motion.div>
         <motion.div
@@ -84,7 +84,7 @@ export default function Header({ socials }: Props) {
           onHoverEnd={(e) => {}}
         >
           <a href="https://dev.to/mpetry" target="_blank" rel="noreferrer">
-            <FaDev className="w-[25px] h-[25px] mx-3 text-[#808080]" />
+            <FaDev className="w-[24px] h-[24px] mx-3 text-[#808080]" />
           </a>
         </motion.div>
       </motion.div>

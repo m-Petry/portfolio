@@ -1,5 +1,7 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
+import { FaDev } from "react-icons/fa";
+import { SiReplit } from "react-icons/si";
 import { motion } from "framer-motion";
 import { Social } from "../typings";
 
@@ -9,7 +11,7 @@ type Props = {
 
 export default function Header({ socials }: Props) {
   return (
-    <header className="relative flex items-start justify-between mx-3 xl:mx-6 xl:mt-3 z-20 xl:items-center">
+    <header className="relative z-20 flex items-start justify-between mx-3 xl:mx-6 xl:mt-3 xl:items-center">
       <motion.div
         initial={{
           x: -500,
@@ -27,22 +29,6 @@ export default function Header({ socials }: Props) {
         className="flex flex-row items-center"
       >
         {/* Social Icons */}
-        <motion.div
-          whileHover={{ scale: 1.2 }}
-          onHoverStart={(e) => {}}
-          onHoverEnd={(e) => {}}
-        >
-          {/* {socials.map((social) => ( */}
-          <SocialIcon
-            // key={social._id}
-            url="https://slack.com/app_redirect?channel=U048FPK0LUF"
-            target="_blank"
-            fgColor="gray"
-            bgColor="transparent"
-            className="w-10 h-10 mr-2"
-          />
-          {/* ))} */}
-        </motion.div>
         <motion.div
           whileHover={{ scale: 1.2 }}
           onHoverStart={(e) => {}}
@@ -78,6 +64,28 @@ export default function Header({ socials }: Props) {
             fgColor="gray"
             bgColor="transparent"
           />
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.2 }}
+          onHoverStart={(e) => {}}
+          onHoverEnd={(e) => {}}
+        >
+          <a
+            href="https://replit.com/@MarceloPetry"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <SiReplit className="w-[25px] h-[25px] mx-3 text-[#808080]" />
+          </a>
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.2 }}
+          onHoverStart={(e) => {}}
+          onHoverEnd={(e) => {}}
+        >
+          <a href="https://dev.to/mpetry" target="_blank" rel="noreferrer">
+            <FaDev className="w-[25px] h-[25px] mx-3 text-[#808080]" />
+          </a>
         </motion.div>
       </motion.div>
       {/* Mail */}

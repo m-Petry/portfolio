@@ -10,7 +10,7 @@ type Props = {
 
 function Projects({ projects }: Props) {
   return (
-    <div className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly items-center px-10 z-0">
+    <div className="relative z-0 flex flex-col items-center h-screen max-w-full px-10 overflow-hidden text-left md:flex-row justify-evenly">
       <h3 className="absolute top-24 uppercase tracking-[20px] indent-5 text-gray-500 text-2xl">
         Projects
       </h3>
@@ -19,7 +19,7 @@ function Projects({ projects }: Props) {
         {projects?.map((project, i) => (
           <div
             key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10 md:p-44 h-screen max-w-5xl"
+            className="flex flex-col items-center justify-center flex-shrink-0 w-screen h-screen max-w-5xl p-10 space-y-5 snap-center md:p-44"
           >
             <motion.img
               initial={{
@@ -33,17 +33,17 @@ function Projects({ projects }: Props) {
               alt="webapps on all responsive devices"
               className="rounded-lg"
             />
-            <div className="space-y-10 px-0 md:px-10 max-w-6xl ">
-              <h4 className="text-2xl md:text-4xl font-semibold text-center">
+            <div className="max-w-6xl px-0 space-y-10 md:px-10 ">
+              <h4 className="text-2xl font-semibold text-center md:text-4xl">
                 <span className="underline decoration-[#F7AB0A]/50">
-                  Case Study {i + 1} of {projects.length}:
+                  Project {i + 1} of {projects.length}:
                 </span>{" "}
                 {project?.title}
               </h4>
-              <div className="flex items-center space-x-2 justify-center">
+              <div className="flex items-center justify-center space-x-2">
                 {project?.technologies.map((technology) => (
                   <img
-                    className="h-5 w-5"
+                    className="w-5 h-5"
                     key={technology._id}
                     src={urlFor(technology.image).url()}
                     alt="technologies-logos"
